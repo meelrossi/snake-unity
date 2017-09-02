@@ -5,31 +5,26 @@ using System.Linq;
 
 public class Snake : MonoBehaviour {
 
-	Vector2 dir = Vector2.right;
-	List<Transform> tail = new List<Transform>();
-	// Did the snake eat something?
-	bool ate = false;
-	bool dead = false;
-
-	// Tail Prefab
 	public GameObject tailPrefab;
 
+	List<Transform> tail = new List<Transform>();
 
-	// Use this for initialization
+	Vector2 dir = Vector2.right;
+
+	bool ate, dead = false;
+
 	void Start () {
 		InvokeRepeating("Move", 0.3f, 0.1f);
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		// Move in a new Direction?
-		if (Input.GetKey(KeyCode.RightArrow))
+		if (Input.GetKey(KeyCode.RightArrow) && dir != -Vector2.right)
 			dir = Vector2.right;
-		else if (Input.GetKey(KeyCode.DownArrow))
-			dir = -Vector2.up;    // '-up' means 'down'
-		else if (Input.GetKey(KeyCode.LeftArrow))
-			dir = -Vector2.right; // '-right' means 'left'
-		else if (Input.GetKey(KeyCode.UpArrow))
+		else if (Input.GetKey(KeyCode.DownArrow) && dir != Vector2.up)
+			dir = -Vector2.up;
+		else if (Input.GetKey(KeyCode.LeftArrow) && dir != Vector2.right)
+			dir = -Vector2.right;
+		else if (Input.GetKey(KeyCode.UpArrow) && dir != -Vector2.up)
 			dir = Vector2.up;
 	}
 
@@ -38,42 +33,32 @@ public class Snake : MonoBehaviour {
 			CancelInvoke();
 		}
 
-		// Save current position (gap will be here)
-		Vector2 v = transform.position;
+		Vector2 pos = transform.position;
 
-		// Move head into new direction
-		transform.Translate(dir);
-
-		// Ate something? Then insert new Element into gap
 		if (ate) {
-			// Load Prefab into the world
 			GameObject g =(GameObject)Instantiate(tailPrefab,
-				v,
+				pos,
 				Quaternion.identity);
 
-			// Keep track of it in our tail list
-			tail.Insert(0, g.transform);
-
-			// Reset the flag
+			tail.Insert(tail.Count, g.transform);
 			ate = false;
 		}
 
-		// Do we have a Tail?
-		if (tail.Count > 0) {
-			// Move last Tail Element to where the Head was
-			tail.Last().position = v;
-
-			// Add to front of list, remove from the back
-			tail.Insert(0, tail.Last());
-			tail.RemoveAt(tail.Count-1);
+		foreach (Transform item in tail) {
+			item.Translate (dir);
 		}
+
+		transform.Translate(dir);
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
+	void FullyContains2D (Collider2D coll) {
+		Vector2 pos1 = coll.gameObject.transform.position;
+		Vector2 pos2 = transform.position;
 		// Food?
-		if (coll.name.StartsWith("FoodPrefab")) {
+		if (coll.name.StartsWith("FoodPrefab") && pos1.x == pos2.x && pos1.y == pos2.y) {
 			// Get longer in next Move call
 			ate = true;
+			Debug.Log (coll.name);
 
 			// Remove the Food
 //			Destroy(coll.gameObject);
