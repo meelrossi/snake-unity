@@ -1,0 +1,17 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="LoadSceneOnClick">
+			<method name="ChangeMenuScene"/>
+		</type>
+		<type fullname="PauseScript">
+			<method name="RestartGame"/>
+			<method name="RestartGame"/>
+			<method name="PauseGame"/>
+		</type>
+		<type fullname="Snake">
+			<method name="RestartSnake"/>
+			<method name="RestartSnake"/>
+			<method name="PauseHandler"/>
+		</type>
+	</assembly>
+</linker>
