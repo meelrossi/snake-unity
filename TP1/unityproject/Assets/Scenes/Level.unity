@@ -184,18 +184,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1165696744}
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1279928731}
+      - m_Target: {fileID: 1323419109}
         m_MethodName: RestartSnake
         m_Mode: 1
         m_Arguments:
@@ -418,8 +407,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7, y: 0.01}
-    newSize: {x: 0.7, y: 0.01}
+    oldSize: {x: 70, y: 1}
+    newSize: {x: 70, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -464,7 +453,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7, y: 0.01}
+  m_Size: {x: 70, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -614,7 +603,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.01, y: 0.52}
+    oldSize: {x: 1, y: 52}
     newSize: {x: 0.01, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -656,7 +645,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80aea1b76d3b44df88b4101133f59a1d, type: 3}
-  m_Color: {r: 0.6666667, g: 0.19215688, b: 0.21568629, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -921,8 +910,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7, y: 0.01}
-    newSize: {x: 0.7, y: 0.01}
+    oldSize: {x: 70, y: 1}
+    newSize: {x: 70, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -967,7 +956,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7, y: 0.01}
+  m_Size: {x: 70, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1018,7 +1007,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.01, y: 0.52}
+    oldSize: {x: 1, y: 52}
     newSize: {x: 0.01, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1213,7 +1202,6 @@ GameObject:
   - component: {fileID: 1165696743}
   - component: {fileID: 1165696742}
   - component: {fileID: 1165696741}
-  - component: {fileID: 1165696744}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -1299,20 +1287,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1165696744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1165696739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924ab9f63c56546a3a7c6c900729e86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseSprite: {fileID: 21300000, guid: 9496dd648c76e4e1aaab5057b33d555a, type: 3}
-  playSprite: {fileID: 21300000, guid: 3af6711622a664026b34adaa3915a202, type: 3}
-  pauseButton: {fileID: 1990919270}
 --- !u!1 &1224624258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1389,18 +1363,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1165696744}
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1279928731}
+      - m_Target: {fileID: 1323419109}
         m_MethodName: RestartSnake
         m_Mode: 1
         m_Arguments:
@@ -1463,13 +1426,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tailPrefab: {fileID: 1467181430911488, guid: 9c0db397cda5a4452ad0d90b4afd4c5e, type: 2}
-  foodPrefab: {fileID: 1740800209232636, guid: b637ad2186a8b4de2928a4167aad1fc4, type: 2}
-  borderTop: {fileID: 426453866}
-  borderBottom: {fileID: 920939081}
-  borderLeft: {fileID: 646662500}
-  borderRight: {fileID: 928776247}
-  gameOverPaner: {fileID: 2021767484}
-  scoreText: {fileID: 1900978194}
 --- !u!50 &1279928732
 Rigidbody2D:
   serializedVersion: 4
@@ -1571,6 +1527,7 @@ GameObject:
   - component: {fileID: 1323419105}
   - component: {fileID: 1323419104}
   - component: {fileID: 1323419103}
+  - component: {fileID: 1323419109}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1659,6 +1616,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1323419109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323419102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d75209c11d7f44a87bada4bfc4c4af22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPrefab: {fileID: 1740800209232636, guid: b637ad2186a8b4de2928a4167aad1fc4, type: 2}
+  snake: {fileID: 1279928731}
+  borderTop: {fileID: 426453866}
+  borderBottom: {fileID: 920939081}
+  borderLeft: {fileID: 646662500}
+  borderRight: {fileID: 928776247}
+  scoreText: {fileID: 1900978194}
+  pausePanel: {fileID: 1165696739}
+  pauseButton: {fileID: 1990919270}
+  pauseSprite: {fileID: 21300000, guid: 9496dd648c76e4e1aaab5057b33d555a, type: 3}
+  playSprite: {fileID: 21300000, guid: 3af6711622a664026b34adaa3915a202, type: 3}
+  gameOverPanel: {fileID: 2021767484}
 --- !u!1 &1576015532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,19 +1933,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1165696744}
+      - m_Target: {fileID: 1323419109}
         m_MethodName: PauseGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1279928731}
-        m_MethodName: PauseHandler
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
